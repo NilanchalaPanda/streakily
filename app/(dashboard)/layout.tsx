@@ -1,5 +1,4 @@
 import { AppSidebar } from "@/components/app-sidebar";
-import { ModeToggle } from "@/components/theme";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 export default function DashboardLayout({
@@ -12,9 +11,7 @@ export default function DashboardLayout({
       <AppSidebar />
       <main>
         <SidebarTrigger />
-        <div className="p-10 text-4xl font-bold">
-          {children} <ModeToggle />
-        </div>
+        <div className="p-8">{children}</div>
       </main>
     </SidebarProvider>
   );
