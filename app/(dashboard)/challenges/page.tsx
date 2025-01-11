@@ -1,6 +1,7 @@
 "use client";
 
 import ChallengeTables from "@/components/challenges-table";
+import OathDialog from "@/components/oathDialog";
 import { useSidebar } from "@/components/ui/sidebar";
 import React from "react";
 
@@ -35,15 +36,21 @@ const Challenges = () => {
       </p>
 
       {/* LIST OF FAMOUS GO-TO CHALLENGES */}
-      <div className="flex flex-row gap-x-2 py-3">
-        {challenges.map((challenge, index): any => (
-          <div
-            className="select-none rounded-full border-2 border-gray-500 bg-zinc-900 px-4 py-1 text-gray-300 transition-all hover:cursor-pointer hover:border-gray-300 hover:bg-zinc-800 hover:text-gray-200"
-            key={index}
-          >
-            #{challenge.days} days
-          </div>
-        ))}
+      <div className="mr-5 flex flex-row items-center justify-between">
+        <div className="flex flex-row gap-x-2 py-3">
+          {challenges.map((challenge, index): any => (
+            <div
+              className="select-none rounded-full border-2 border-gray-500 bg-zinc-900 px-4 py-1 text-gray-300 transition-all hover:cursor-pointer hover:border-gray-300 hover:bg-zinc-800 hover:text-gray-200"
+              key={index}
+            >
+              #{challenge.days} days
+            </div>
+          ))}
+        </div>
+        {/* BUTTON TO CREATE NEW CHALLENGE */}
+        <div>
+          <OathDialog />
+        </div>
       </div>
 
       {/* CHALLENGES TABLE */}

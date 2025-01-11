@@ -6,6 +6,7 @@ import {
   Search,
   Settings,
   User2,
+  UserRoundCog,
 } from "lucide-react";
 
 import {
@@ -33,6 +34,11 @@ const items = [
     title: "Challenges",
     url: "/challenges",
     icon: Home,
+  },
+  {
+    title: "Accounts",
+    url: "/accounts",
+    icon: UserRoundCog,
   },
   {
     title: "Leaderboard",
